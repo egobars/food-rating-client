@@ -1,0 +1,143 @@
+.sidebar {
+    width: 400px;
+}
+
+.sidebar-content {
+    width: 100%;
+    height: calc(100vh - 50px);
+    position: sticky;
+    top: 50px;
+    display: flex;
+    box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
+}
+
+.sidebar-panel {
+    width: calc(100% - 3px);
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.sidebar-panel h2 {
+    margin-top: 5px;
+}
+
+.vertical-line {
+    background-color: lightgray;
+    width: 3px;
+    height: 100%;
+}
+
+.best-products-panel {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.best-products-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.best-products-panel li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.best-products-panel li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-products-comments-count {
+    color: gray;
+    font-size: 15px;
+}
+
+.best-products-average-mark {
+    font-size: 25px;
+    color: #ffd700;
+}
+
+.best-users-panel {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.best-users-panel ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar-user-panel {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sidebar-user-panel label {
+    font-size: 20px;
+}
+
+.sidebar-user-panel input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.sidebar-user-panel button {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-wrapper button {
+    width: 100px;
+}
+
+.color-gray {
+    color: gray;
+}
+
+.flex-column-margin-top-10 {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-row-gray-gap-10 {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: gray;
+}
+
+.best-products-karma {
+    font-size: 15px;
+}
+
+.best-users-comments-count {
+    font-size: 15px;
+}
+
+.button {
+    background-color: #45cea2;
+    color: white;
+    border: 3px solid #45cea2;
+}
+
+.button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #45cea2;
+}

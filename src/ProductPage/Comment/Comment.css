@@ -1,0 +1,60 @@
+.comment {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 850px;
+}
+
+.comment-user-date-panel {
+    color: gray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment-user-date-panel span {
+    font-size: 15px;
+}
+
+hr {
+    width: 100%;
+    color: black;
+}
+
+.comment-mark-score-panel {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.comment-mark-panel {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.comment-mark-panel span {
+    font-size: 25px;
+}
+
+.comment-mark-panel-mark {
+    color: gold;
+}
+
+.comment-score-panel {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+}
+
+.comment-score-panel button:disabled {
+    background-color: lightgray;
+    border-color: gray;
+}
+
+.comment-score-panel button:disabled:hover {
+    color: white;
+    cursor: not-allowed;
+}

@@ -1,0 +1,35 @@
+.content-add {
+    display: flex;
+    flex-direction: column;
+}
+
+.add-form {
+    display: flex;
+    flex-direction: column;
+    font-size: 20px;
+    gap: 10px;
+}
+
+.product-text-input {
+    width: 300px;
+    font-size: 20px;
+}
+
+.add-form textarea {
+    width: 500px;
+    font-size: 20px;
+}
+
+.product-form-send-button {
+    font-size: 20px;
+    width: 150px;
+    background-color: #45cea2;
+    color: white;
+    border: 3px solid #45cea2;
+}
+
+.product-form-send-button:hover {
+    cursor: pointer;
+    background-color: white;
+    color: #45cea2;
+}
