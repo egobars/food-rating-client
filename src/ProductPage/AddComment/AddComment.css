@@ -1,0 +1,28 @@
+.label-mark-wrapper span {
+    font-size: 25px;
+}
+
+.comment-empty-star {
+    color: gray;
+    cursor: default;
+}
+
+.comment-filled-star {
+    color: gold;
+    cursor: default;
+}
+
+.post-comment-text {
+    width: 100%;
+}
+
+.post-comment-button {
+    font-size: 20px;
+    width: 120px;
+}
+
+.post-comment {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}

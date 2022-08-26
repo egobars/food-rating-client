@@ -1,20 +1,15 @@
 import React from "react";
 import axios from "axios";
-import {toast, ToastContainer} from "react-toastify";
+import {toast} from "react-toastify";
 import 'react-toastify/dist/ReactToastify.css';
-import Header from "./Header/Header";
-import {BrowserRouter, Route, Routes} from "react-router-dom";
-import Sidebar from "./Sidebar/Sidebar";
-import Catalog from "./Catalog/Catalog";
-import Add from "./Add/Add";
-import ProductPage from "./ProductPage/ProductPage";
+import App from "./App";
 
 class Account extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            user: null
+            user: null,
         }
         this.register = this.register.bind(this);
         this.login = this.login.bind(this);
@@ -154,22 +149,7 @@ class Account extends React.Component {
 
     render() {
         return (
-            <div className='main-wrapper'>
-                <Header />
-                <div className="main-page-wrapper">
-                    <BrowserRouter>
-                        <Sidebar user={this.state.user} register={this.register} login={this.login} logout={this.logout} />
-                        <div className="content-wrapper">
-                            <Routes>
-                                <Route path='/' element={<Catalog user={this.state.user} />} />
-                                <Route path='/add' element={<Add user={this.state.user} />} />
-                                <Route path='/products/*' element={<ProductPage user={this.state.user} />} />
-                            </Routes>
-                        </div>
-                    </BrowserRouter>
-                </div>
-                <ToastContainer />
-            </div>
+            <App user={this.state.user} register={this.register} login={this.login} logout={this.logout} />
         );
     }
 }

@@ -1,0 +1,37 @@
+.best-products-panel {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.best-products-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.best-products-panel li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+}
+
+.best-products-panel li div {
+    display: flex;
+    flex-direction: column;
+}
+
+.best-products-comments-count {
+    color: gray;
+    font-size: 15px;
+}
+
+.best-products-average-mark {
+    font-size: 25px;
+    color: #ffd700;
+}
+
+.best-products-karma {
+    font-size: 15px;
+}

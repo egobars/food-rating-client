@@ -1,0 +1,36 @@
+.sidebar-user-panel {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.sidebar-user-panel label {
+    font-size: 20px;
+}
+
+.sidebar-user-panel input {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 20px;
+}
+
+.sidebar-user-panel button {
+    font-size: 20px;
+    margin-top: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.user-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.user-wrapper button {
+    width: 100px;
+}
+
+.user-comments-karma {
+    color: gray;
+}

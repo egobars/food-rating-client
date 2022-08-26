@@ -99,8 +99,8 @@ class Add extends React.Component {
                     <input className="product-text-input" type="text" value={this.state.name} onChange={(event) => this.setState({name: event.target.value})} />
                     <label>Изображение:</label>
                     <input type="file" ref={this.fileInput} onChange={this.changeFile} />
-                    <img src={this.state.imageSrc} ref={this.imageElement} width="600"/>
-                    <img src={this.state.resultImageSrc} width="600" />
+                    <img src={this.state.imageSrc} ref={this.imageElement} width="600" alt='source' />
+                    <img src={this.state.resultImageSrc} width="600" alt='result' />
                     <label>Короткое описание:</label>
                     <textarea rows="4" value={this.state.short_description} onChange={(event) => this.setState({short_description: event.target.value})} />
                     <label>Длинное описание:</label>

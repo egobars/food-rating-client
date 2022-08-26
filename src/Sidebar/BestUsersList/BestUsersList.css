@@ -1,0 +1,28 @@
+.best-users-panel {
+    padding-top: 15px;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.best-users-panel ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.best-users-comments-count {
+    font-size: 15px;
+}
+
+.best-user-wrapper {
+    margin-top: 5px;
+    display: flex;
+    flex-direction: column;
+}
+
+.best-user-comment-karma-wrapper {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+    color: gray;
+}

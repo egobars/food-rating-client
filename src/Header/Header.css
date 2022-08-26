@@ -5,17 +5,41 @@
     position: fixed;
     box-shadow: 0 5px 10px 2px rgba(34, 60, 80, 0.2);
     z-index: 100;
+    display: flex;
+    gap: 50px;
 }
 
-.header div {
+.header .header-main {
     height: 100%;
-    width: 200px;
+    width: 250px;
     padding-left: 10%;
     display: flex;
     align-items: center;
 }
 
+.header .header-main a {
+    color: white;
+    font-size: 30px;
+    text-decoration: none;
+    font-family: 'Roboto', sans-serif;
+}
+
+.header .header-add button {
+    font-size: 30px;
+}
+
+.header-right-side {
+    width: 100%;
+    display: flex;
+    justify-content: right;
+}
+
 .header span {
     color: white;
     font-size: 30px;
+}
+
+.header button {
+    height: 100%;
+    font-size: 40px;
 }
