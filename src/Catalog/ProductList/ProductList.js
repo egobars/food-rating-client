@@ -46,6 +46,15 @@ class ProductList extends React.Component {
         this.getProductsList('');
     }
 
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.search_word !== prevProps.search_word) {
+            this.setState({
+                loaded_products: false
+            });
+            this.getProductsList(this.props.search_word);
+        }
+    }
+
     setRedirectId(redirect_id) {
         this.setState({redirect_id: redirect_id});
     }

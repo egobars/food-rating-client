@@ -16,7 +16,7 @@ class CommentsList extends React.Component {
         this.changeScore = this.changeScore.bind(this);
     }
 
-    componentDidMount() {
+    setCommentsList() {
         axios.get('/api/get/comments/' + this.props.id).then(res => {
             let comments = res.data.comments;
             this.setState({
@@ -24,6 +24,16 @@ class CommentsList extends React.Component {
                 comments: comments
             });
         });
+    }
+
+    componentDidMount() {
+        this.setCommentsList();
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        if (this.props.user !== prevProps.user) {
+            this.setCommentsList();
+        }
     }
 
     async changeScore(event, id, value) {
@@ -48,7 +58,7 @@ class CommentsList extends React.Component {
         let comments = this.state.comments;
         comments.forEach((element) => {
             to_return.push(
-                <Comment changeScore={this.changeScore} comment={element} />
+                <Comment key={element.id} changeScore={this.changeScore} user={this.props.user} comment={element} />
             );
         })
         return to_return;
