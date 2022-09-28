@@ -1,6 +1,7 @@
 import React from "react";
 import './ProductInfo.css';
 import axios from "axios";
+import {isMobile} from "react-device-detect";
 
 class ProductInfo extends React.Component {
     constructor(props) {
@@ -29,6 +30,11 @@ class ProductInfo extends React.Component {
     }
 
     render() {
+        let imageSize = 400;
+        if (isMobile) {
+            imageSize = 380;
+        }
+
         if (!this.state.loaded_product) {
             return (
                 <span>...</span>
@@ -36,7 +42,7 @@ class ProductInfo extends React.Component {
         }
         return (
             <div className="product-overall">
-                <img src={this.state.image} width="400" height="400" alt='product'></img>
+                <img src={this.state.image} width={imageSize} height={imageSize} alt='product'></img>
                 <div className="product-name-description-rating">
                     <h1>{this.state.name}</h1>
                     <span className="product-long-description">{this.state.long_description}</span>

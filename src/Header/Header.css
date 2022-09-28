@@ -41,5 +41,15 @@
 
 .header button {
     height: 100%;
-    font-size: 40px;
+    font-size: 30px;
+}
+
+@media (max-width: 1200px) {
+    .header {
+        gap: 0;
+    }
+
+    .header .header-main {
+        width: 1000px;
+    }
 }

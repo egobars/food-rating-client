@@ -7,13 +7,14 @@ import Catalog from "./Catalog/Catalog";
 import Add from "./Add/Add";
 import ProductPage from "./ProductPage/ProductPage";
 import {ToastContainer} from "react-toastify";
+import { isMobile } from 'react-device-detect';
 
 class App extends React.Component {
     constructor(props) {
         super(props);
 
         this.state = {
-            is_sidebar_collapsed: false
+            is_sidebar_collapsed: isMobile
         }
 
         this.collapseSidebar = this.collapseSidebar.bind(this);
@@ -25,6 +26,23 @@ class App extends React.Component {
         });
     }
 
+    getContent() {
+        if (isMobile && !this.state.is_sidebar_collapsed) {
+            return (
+                <></>
+            )
+        }
+        return (
+            <div className="content-wrapper">
+                <Routes>
+                    <Route path='/' element={<Catalog user={this.props.user} />} />
+                    <Route path='/add' element={<Add user={this.props.user} />} />
+                    <Route path='/products/*' element={<ProductPage user={this.props.user} />} />
+                </Routes>
+            </div>
+        )
+    }
+
     render() {
         return (
             <BrowserRouter>
@@ -32,13 +50,7 @@ class App extends React.Component {
                     <Header collapseSidebar={this.collapseSidebar} />
                     <div className="main-page-wrapper">
                         <Sidebar is_collapsed={this.state.is_sidebar_collapsed} user={this.props.user} register={this.props.register} login={this.props.login} logout={this.props.logout} />
-                        <div className="content-wrapper">
-                            <Routes>
-                                <Route path='/' element={<Catalog user={this.props.user} />} />
-                                <Route path='/add' element={<Add user={this.props.user} />} />
-                                <Route path='/products/*' element={<ProductPage user={this.props.user} />} />
-                            </Routes>
-                        </div>
+                        {this.getContent()}
                     </div>
                     <ToastContainer />
                 </div>

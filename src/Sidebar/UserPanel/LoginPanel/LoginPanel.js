@@ -7,7 +7,7 @@ class LoginPanel extends React.Component {
         return (
             <>
                 <h2>Войти:</h2>
-                <form onSubmit={this.props.login}>
+                <form onSubmit={this.props.login} className="user-form">
                     <label>Логин:</label>
                     <input type="text" name="login" />
                     <label>Пароль:</label>

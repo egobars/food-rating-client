@@ -7,7 +7,7 @@ class RegisterPanel extends React.Component {
         return (
             <>
                 <h2>Зарегистрироваться:</h2>
-                <form onSubmit={this.props.register}>
+                <form onSubmit={this.props.register} className="user-form">
                     <label>Логин:</label>
                     <input type="text" name="login" />
                     <label>Пароль:</label>

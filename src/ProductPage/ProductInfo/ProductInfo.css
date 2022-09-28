@@ -27,3 +27,14 @@
     font-size: 25px;
     color: #ffd700;
 }
+
+@media (max-width: 1200px) {
+    .product-overall {
+        flex-direction: column;
+    }
+
+    .product-name-description-rating {
+        width: 100%;
+        max-width: 850px;
+    }
+}

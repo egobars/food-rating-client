@@ -3,3 +3,10 @@
     grid-template-columns: repeat(auto-fit, 180px);
     gap: 30px;
 }
+
+@media (max-width: 1200px) {
+    .products-grid {
+        grid-template-columns: repeat(auto-fit, 160px);
+        gap: 30px;
+    }
+}
